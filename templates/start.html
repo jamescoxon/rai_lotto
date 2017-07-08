@@ -1,15 +1,24 @@
 <html>
 <head><meta http-equiv="refresh" content="30"></head>
-<h1>XRB Lotto</h1>
-<p>To play send 1XRB to xrb_3qe8a5uc11zcn14t4mgktjcccc3scu7dksqdn76fbpbjc3ukefgthgj9funo</p>
+<h1 style="color:blue; text-align: center">XRB Lotto</h1>
+<p style="text-align: center">Total Prize = {{ total_fund}} XRB</p>
+<p style="text-align: center">Time until next draw = {{ time_until_event }} seconds</p>
+<br>
+<p>Current addresses: </p>
+{% for address in addresses %}
+<p>{{ address }}</p>
+{% endfor %}
+<p>Last Winner: {{ winner }}</p>
+<br>
+<h3>Rules</h3>
+<p>To play send 1 XRB to xrb_3qe8a5uc11zcn14t4mgktjcccc3scu7dksqdn76fbpbjc3ukefgthgj9funo</p>
 <p>Every {{ draw_gap }} mins the server will select a random account and payout the total lotto fund</p>
 <p>This page will refresh every minute with the total fund and a list of addresses</p>
 <p>If you send less then 1XRB you won't enter the draw and what you've sent will be regarded as a donation, if you send more then 1XRB you will only be entered
 once and the extra funds will be added to the total fund</p>
-<p>Total in fund = {{ total_fund}}</p>
-<p>Time until next draw = {{ time_until_event }} seconds</p>
-<p>Current addresses: </p>
-<p>{{ addresses }}
 <br>
-<p>Last Winner: {{ winner }}</p>
+<h3>Links</h3>
+<p><a href="https://yapraiwallet.space">YapRai Wallet</a></p>
+<p><a href="https://github.com/jamescoxon/rai_lotto">rai_lotto code</a></p>
+<p><a href="https://raiblockscommunity.net/">RaiBlocks</a></p>
 </html>
